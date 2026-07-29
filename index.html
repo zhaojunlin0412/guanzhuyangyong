@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>冠珠陶瓷·索菲亚整家定制｜品质家装一站购</title>
+<meta name="description" content="冠珠陶瓷·索菲亚整家定制：瓷砖岩板、全屋定制一站购齐，免费量房设计，正品保障。咨询热线 13363410444（微信同号）">
+<style>
+:root{
+  --bg:#f7f3ec; --card:#ffffff; --ink:#2c231a; --muted:#8a7a6a;
+  --brand:#a4572a; --brand-d:#8a4620; --gold:#c9a15f; --line:#e8dfd2;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+img{max-width:100%}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 18px}
+
+/* 顶部导航 */
+.nav{position:sticky;top:0;z-index:50;background:rgba(247,243,236,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.nav .logo{font-weight:700;font-size:17px;letter-spacing:1px}
+.nav .logo span{color:var(--brand)}
+.btn{display:inline-block;padding:12px 26px;border-radius:999px;background:var(--brand);color:#fff;font-weight:600;font-size:16px;box-shadow:0 4px 14px rgba(164,87,42,.28);transition:.2s}
+.btn:active{transform:scale(.96)}
+.btn.ghost{background:#fff;color:var(--brand);border:1.5px solid var(--brand);box-shadow:none}
+.btn.sm{padding:8px 18px;font-size:14px}
+
+/* 首屏 */
+.hero{padding:64px 0 48px;text-align:center;background:linear-gradient(180deg,#f2e8da 0%,var(--bg) 100%)}
+.hero .tag{display:inline-block;font-size:13px;color:var(--brand);border:1px solid var(--gold);border-radius:999px;padding:4px 14px;margin-bottom:16px;background:#fff8ef}
+.hero h1{font-size:30px;line-height:1.4;letter-spacing:1px}
+.hero h1 em{font-style:normal;color:var(--brand)}
+.hero p.sub{margin:14px auto 26px;color:var(--muted);font-size:16px;max-width:560px}
+.hero .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.badges{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:30px}
+.badges div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 16px;font-size:13.5px;color:var(--ink)}
+.badges b{color:var(--brand)}
+
+/* 区块 */
+section{padding:52px 0}
+.sec-title{text-align:center;margin-bottom:34px}
+.sec-title h2{font-size:24px;letter-spacing:2px}
+.sec-title p{color:var(--muted);font-size:14px;margin-top:6px}
+.sec-title::after{content:"";display:block;width:44px;height:3px;background:var(--gold);margin:12px auto 0;border-radius:2px}
+
+/* 品牌卡片 */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.brand-card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 6px 24px rgba(90,60,30,.06)}
+.brand-card .pic{height:150px;display:flex;align-items:center;justify-content:center;font-size:56px;letter-spacing:10px}
+.brand-card:nth-child(1) .pic{background:linear-gradient(135deg,#b5672a,#8a4620)}
+.brand-card:nth-child(2) .pic{background:linear-gradient(135deg,#3e5c43,#2c4630)}
+.brand-card .body{padding:22px 24px 26px}
+.brand-card h3{font-size:20px;margin-bottom:4px}
+.brand-card .en{color:var(--muted);font-size:12.5px;letter-spacing:2px;text-transform:uppercase}
+.brand-card ul{list-style:none;margin-top:14px}
+.brand-card li{padding:6px 0 6px 24px;position:relative;font-size:15px;border-bottom:1px dashed var(--line)}
+.brand-card li:last-child{border-bottom:none}
+.brand-card li::before{content:"✔";position:absolute;left:0;color:var(--brand);font-weight:700}
+
+/* 优惠 */
+.promo{background:linear-gradient(135deg,#8a4620,#a4572a);color:#fff;border-radius:20px;padding:34px 28px;text-align:center}
+.promo h3{font-size:22px;margin-bottom:8px}
+.promo .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.promo .item{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:18px 12px}
+.promo .item .big{font-size:24px;font-weight:800;color:#ffe3b3}
+.promo .item .txt{font-size:13.5px;margin-top:4px;opacity:.92}
+
+/* 到店信息 */
+.visit .box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px}
+.visit dl{display:grid;grid-template-columns:76px 1fr;row-gap:12px;font-size:15.5px}
+.visit dt{color:var(--muted)}
+.visit dd b{color:var(--brand)}
+.visit .row{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+
+/* 留资表单 */
+.lead{background:var(--card);border-top:1px solid var(--line)}
+.lead form{max-width:520px;margin:0 auto;display:grid;gap:12px}
+.lead input,.lead select{font-size:16px;padding:13px 16px;border:1.5px solid var(--line);border-radius:12px;background:#fbf9f5;width:100%;font-family:inherit}
+.lead input:focus,.lead select:focus{outline:none;border-color:var(--brand)}
+.lead .tip{font-size:13px;color:var(--muted);text-align:center}
+#leadResult{display:none;margin-top:14px;background:#fff8ef;border:1px solid var(--gold);border-radius:12px;padding:14px 16px;font-size:14px}
+#leadResult .msg{background:#fff;border:1px dashed var(--gold);border-radius:8px;padding:10px 12px;margin:10px 0;font-size:14px;white-space:pre-wrap}
+
+footer{background:#241c14;color:#cbb99f;text-align:center;padding:30px 18px;font-size:13.5px}
+footer b{color:#ffe3b3;font-size:16px}
+
+/* 浮动按钮 */
+.fab{position:fixed;right:16px;z-index:90;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 6px 18px rgba(0,0,0,.22);cursor:pointer;border:none}
+.fab.call{bottom:88px;background:var(--brand);color:#fff}
+.fab.chat{bottom:16px;background:#fff;color:var(--brand);border:1.5px solid var(--brand)}
+.fab .dot{position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:#e23b3b;border-radius:50%;border:2px solid #fff}
+
+/* 客服聊天窗 */
+.chatbox{position:fixed;right:12px;bottom:84px;z-index:99;width:min(360px,calc(100vw - 24px));height:min(520px,72vh);background:#fff;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.25);display:none;flex-direction:column;overflow:hidden;border:1px solid var(--line)}
+.chatbox.open{display:flex}
+.chat-hd{background:linear-gradient(135deg,#a4572a,#8a4620);color:#fff;padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+.chat-hd .t{font-weight:700;font-size:15px}
+.chat-hd .s{font-size:12px;opacity:.85}
+.chat-hd .x{cursor:pointer;font-size:20px;line-height:1;background:none;border:none;color:#fff}
+.chat-bd{flex:1;overflow-y:auto;padding:14px;background:#f6f1e9;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:82%;padding:9px 13px;border-radius:14px;font-size:14.5px;line-height:1.6;white-space:pre-wrap;word-break:break-word}
+.msg.bot{background:#fff;border:1px solid var(--line);border-top-left-radius:4px;align-self:flex-start}
+.msg.me{background:var(--brand);color:#fff;border-top-right-radius:4px;align-self:flex-end}
+.msg .callbtn{display:inline-block;margin-top:8px;padding:8px 16px;background:var(--brand);color:#fff;border-radius:999px;font-weight:600;font-size:14px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding:8px 14px;background:#f6f1e9;border-top:1px solid var(--line)}
+.chips button{font-size:13px;padding:6px 12px;border-radius:999px;border:1px solid var(--brand);color:var(--brand);background:#fff;cursor:pointer}
+.chat-ft{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--line);background:#fff}
+.chat-ft input{flex:1;border:1.5px solid var(--line);border-radius:999px;padding:9px 14px;font-size:14.5px;font-family:inherit}
+.chat-ft input:focus{outline:none;border-color:var(--brand)}
+.chat-ft button{border:none;background:var(--brand);color:#fff;border-radius:999px;padding:0 18px;font-size:14.5px;cursor:pointer}
+
+/* 动效 */
+.reveal{opacity:0;transform:translateY(22px);transition:.6s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:680px){
+  .cards{grid-template-columns:1fr}
+  .promo .grid{grid-template-columns:1fr}
+  .hero h1{font-size:25px}
+  .nav .logo{font-size:14.5px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="logo">冠珠陶瓷 <span>×</span> 索菲亚整家定制</div>
+    <a class="btn sm" href="tel:13363410444">📞 电话咨询</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="tag">本地实体门店 · 正品保障 · 免费量房设计</div>
+    <h1>瓷砖 + 全屋定制<br><em>一站购齐</em>，装修省心更省钱</h1>
+    <p class="sub">冠珠陶瓷厂价直供 · 索菲亚整家定制环保板材<br>到店享专属优惠，全城免费上门量房出图</p>
+    <div class="cta">
+      <a class="btn" href="tel:13363410444">📞 一键拨打热线</a>
+      <button class="btn ghost" onclick="openChat()">💬 在线咨询</button>
+    </div>
+    <div class="badges">
+      <div><b>✔</b> 品牌正品</div>
+      <div><b>✔</b> 免费量房设计</div>
+      <div><b>✔</b> 报价透明无增项</div>
+      <div><b>✔</b> 售后无忧</div>
+    </div>
+  </div>
+</header>
+
+<section id="brands">
+  <div class="wrap">
+    <div class="sec-title reveal"><h2>两大品牌 · 一站购齐</h2><p>瓷砖主材 + 全屋定制，一家搞定</p></div>
+    <div class="cards">
+      <div class="brand-card reveal">
+        <div class="pic">🧱🏺</div>
+        <div class="body">
+          <h3>冠珠陶瓷</h3>
+          <div class="en">GUANZHU CERAMICS</div>
+          <ul>
+            <li>客厅地砖 · 厨卫墙砖 · 岩板背景墙</li>
+            <li>大理石瓷砖 · 木纹砖 · 全规格齐全</li>
+            <li>厂价直供，正品保障，多退少补</li>
+            <li>免费上门量尺、排版设计</li>
+          </ul>
+        </div>
+      </div>
+      <div class="brand-card reveal">
+        <div class="pic">🛋️🚪</div>
+        <div class="body">
+          <h3>索菲亚整家定制</h3>
+          <div class="en">SOGAL WHOLE-HOUSE CUSTOM</div>
+          <ul>
+            <li>衣柜 · 橱柜 · 木门 · 背景墙</li>
+            <li>家具家品一站式配齐</li>
+            <li>环保板材，家人入住更安心</li>
+            <li>免费量房，3D 效果图先看后定</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="promo">
+  <div class="wrap">
+    <div class="promo reveal">
+      <h3>🎉 本月到店专属优惠</h3>
+      <p>电话预约到店，报"网页看到的"即可尊享</p>
+      <div class="grid">
+        <div class="item"><div class="big">满减礼</div><div class="txt">瓷砖满额立减<br>【金额可修改】</div></div>
+        <div class="item"><div class="big">套餐价</div><div class="txt">整家定制套餐特惠<br>【内容可修改】</div></div>
+        <div class="item"><div class="big">0 元</div><div class="txt">免费量房 + 设计<br>全程无押金</div></div>
+      </div>
+      <p style="margin-top:22px"><a class="btn" style="background:#fff;color:var(--brand)" href="tel:13363410444">立即电话锁定优惠</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="wrap">
+    <div class="sec-title reveal"><h2>到店体验</h2><p>实物看得见，品质摸得着</p></div>
+    <div class="box reveal">
+      <dl>
+        <dt>门店地址</dt><dd>山西省太原市清徐县文源路东段盛地小区B区商铺</dd>
+        <dt>营业时间</dt><dd>每天 9:00 - 18:00（节假日正常营业，可修改）</dd>
+        <dt>咨询电话</dt><dd><b>13363410444</b>（微信同号）</dd>
+      </dl>
+      <div class="row">
+        <a class="btn sm" id="amapLink" href="#" target="_blank" rel="noopener">🗺️ 高德地图导航</a>
+        <a class="btn sm ghost" href="tel:13363410444">📞 到店前先预约</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="lead" class="lead">
+  <div class="wrap">
+    <div class="sec-title reveal"><h2>免费预约量房 / 索取报价</h2><p>留下电话，负责人亲自回电（绝不外泄）</p></div>
+    <form id="leadForm" class="reveal">
+      <input type="text" id="leadName" placeholder="您的称呼（如：王先生 / 李女士）" required>
+      <input type="tel" id="leadPhone" placeholder="您的手机号" maxlength="11" pattern="1[0-9]{10}" required>
+      <select id="leadIntent">
+        <option value="瓷砖选购">我想咨询：瓷砖选购</option>
+        <option value="全屋定制">我想咨询：全屋定制</option>
+        <option value="瓷砖+定制都要">我想咨询：瓷砖 + 定制都要</option>
+        <option value="预约量房">我要预约：免费上门量房</option>
+      </select>
+      <button class="btn" type="submit" style="border:none;cursor:pointer">提交，马上安排回电</button>
+      <div class="tip">手机端提交后将自动跳转到短信，点"发送"即可送达负责人手机</div>
+    </form>
+    <div class="wrap" style="max-width:520px">
+      <div id="leadResult">
+        <b>✅ 已生成预约信息</b>
+        <div class="msg" id="leadMsg"></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn sm" id="smsLink" href="#">📩 打开短信发送</a>
+          <button class="btn sm ghost" type="button" onclick="copyLead()">📋 复制内容发微信</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>冠珠陶瓷 × 索菲亚整家定制</div>
+  <div style="margin:8px 0">咨询热线 <b>13363410444</b>（微信同号）</div>
+  <div style="opacity:.6">本页面最终解释权归门店所有 · 页面内容可随时修改更新</div>
+</footer>
+
+<!-- 浮动按钮 -->
+<a class="fab call" href="tel:13363410444" title="拨打电话">📞</a>
+<button class="fab chat" onclick="toggleChat()" title="在线客服">💬<span class="dot"></span></button>
+
+<!-- 智能客服聊天窗 -->
+<div class="chatbox" id="chatbox">
+  <div class="chat-hd">
+    <div><div class="t">智能客服 · 小珠</div><div class="s">秒回常见问题 · 可一键转人工</div></div>
+    <button class="x" onclick="toggleChat()">✕</button>
+  </div>
+  <div class="chat-bd" id="chatBd"></div>
+  <div class="chips" id="chips"></div>
+  <div class="chat-ft">
+    <input id="chatInput" placeholder="输入您的问题，如：多少钱？" onkeydown="if(event.key==='Enter')sendMsg()">
+    <button onclick="sendMsg()">发送</button>
+  </div>
+</div>
+
+<script>
+/* ============ 可修改配置（只改这里即可） ============ */
+const CONFIG = {
+  phone: '13363410444',
+  address: '【请填写门店详细地址】',     // 显示在"到店体验"和客服回复中
+  hours: '9:00 - 18:00',
+  amapKeyword: '冠珠陶瓷',              // 高德地图搜索关键词，可改为门店地址
+  promo: '本月到店享专属优惠',           // 客服口中的活动口径
+};
+/* ================================================== */
+
+/* 高德导航链接 */
+document.getElementById('amapLink').href =
+  'https://ditu.amap.com/search?query=' + encodeURIComponent(CONFIG.amapKeyword);
+
+/* ---------- 留资表单 ---------- */
+let lastLeadText = '';
+document.getElementById('leadForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('leadName').value.trim();
+  const phone = document.getElementById('leadPhone').value.trim();
+  const intent = document.getElementById('leadIntent').value;
+  if(!/^1\d{10}$/.test(phone)){ alert('请输入正确的 11 位手机号'); return; }
+  lastLeadText = '【网页预约】' + name + '，电话：' + phone + '，意向：' + intent + '。请尽快回电，谢谢！';
+  document.getElementById('leadMsg').textContent = lastLeadText;
+  document.getElementById('smsLink').href =
+    'sms:' + CONFIG.phone + '?&body=' + encodeURIComponent(lastLeadText);
+  document.getElementById('leadResult').style.display = 'block';
+  document.getElementById('leadResult').scrollIntoView({behavior:'smooth', block:'center'});
+});
+function copyLead(){
+  const t = lastLeadText + '（来自网页预约，负责人电话：' + CONFIG.phone + '）';
+  navigator.clipboard && navigator.clipboard.writeText(t)
+    .then(()=>alert('已复制，可直接粘贴到微信发送'))
+    .catch(()=>prompt('请手动复制：', t));
+}
+
+/* ---------- 智能客服 ---------- */
+const KB = [
+  {keys:['你好','您好','在吗','hi','hello','在不在'],
+   a:'您好，欢迎咨询冠珠陶瓷·索菲亚整家定制！我是智能客服小珠～\n可以问我：产品价格、门店地址、最新优惠、免费量房等，也可以点下方"转人工"直接电话联系负责人。'},
+  {keys:['价格','多少钱','报价','价位','贵不贵','怎么卖','一平'],
+   a:'关于价格：\n· 瓷砖为厂价直供，不同系列、规格价格不同，性价比很高；\n· 索菲亚定制按实际面积/套餐计价，报价透明无增项。\n想拿精准报价，可免费预约上门量房出图，或直接拨打 ' + CONFIG.phone + '，负责人一对一给您算价～'},
+  {keys:['地址','在哪','位置','怎么走','导航','门店','哪里'],
+   a:'我们的门店地址：' + CONFIG.address + '\n营业时间：每天 ' + CONFIG.hours + '\n导航可直接搜索"' + CONFIG.amapKeyword + '"。到店前建议先电话预约 ' + CONFIG.phone + '，给您安排专人接待～'},
+  {keys:['营业','几点','开门','关门','时间','上班'],
+   a:'我们每天 ' + CONFIG.hours + ' 营业，节假日照常。其他时间也可拨打 ' + CONFIG.phone + ' 预约看样，尽量为您安排～'},
+  {keys:['瓷砖','陶瓷','冠珠','地砖','墙砖','岩板','大理石','木纹砖'],
+   a:'冠珠陶瓷主营：\n· 客厅地砖、厨卫墙砖、岩板背景墙\n· 大理石瓷砖、木纹砖等全规格产品\n厂价直供、正品保障、多退少补，还提供免费上门量尺和排版设计。\n想看实物，随时到店或致电 ' + CONFIG.phone + '～'},
+  {keys:['定制','索菲亚','衣柜','橱柜','木门','全屋','整家','家具','环保'],
+   a:'索菲亚整家定制主营：\n· 衣柜、橱柜、木门、背景墙\n· 家具家品一站式配齐\n环保板材更安心，免费上门量房并出 3D 效果图，先看效果再决定。\n咨询电话：' + CONFIG.phone + '～'},
+  {keys:['优惠','活动','折扣','促销','便宜','减'],
+   a:'本月活动：' + CONFIG.promo + '，到店报"网页看到的"即可享受。\n具体优惠详情欢迎来电 ' + CONFIG.phone + '，给您算到最划算～'},
+  {keys:['量房','量尺','设计','效果图','上门'],
+   a:'我们提供【免费上门量房 + 免费设计出图】服务，全程 0 费用 0 押金。\n拨打 ' + CONFIG.phone + ' 即可预约，也可在本网页底部留下您的电话，负责人会主动回电～'},
+  {keys:['售后','保修','质保','维修','退','换'],
+   a:'售后请放心：\n· 瓷砖多退少补，正品保障；\n· 定制产品按国家标准质保。\n有任何问题直接拨打 ' + CONFIG.phone + '，负责人第一时间处理。'},
+  {keys:['人工','客服','电话','联系','负责人','微信','号码'],
+   a:'为您转接人工客服👇\n负责人电话（微信同号）：' + CONFIG.phone + '\n工作时间秒接，其他时间可发短信/微信，看到必回。',
+   showCall:true},
+];
+const FALLBACK = '这个问题小珠还在学习中😅\n您可以直接联系负责人，马上为您解决：\n电话（微信同号）：' + CONFIG.phone;
+const CHIPS = ['门店地址在哪','瓷砖多少钱','全屋定制怎么收费','现在有什么优惠','免费量房吗','转人工客服'];
+
+const chatBd = document.getElementById('chatBd');
+const chipsBox = document.getElementById('chips');
+let welcomed = false;
+
+function toggleChat(){
+  const box = document.getElementById('chatbox');
+  box.classList.toggle('open');
+  if(box.classList.contains('open') && !welcomed){ welcomed = true; botSay(KB[0].a); renderChips(); }
+}
+function openChat(){
+  const box = document.getElementById('chatbox');
+  if(!box.classList.contains('open')) toggleChat();
+  else document.getElementById('chatInput').focus();
+}
+function addMsg(text, who, showCall){
+  const div = document.createElement('div');
+  div.className = 'msg ' + who;
+  div.textContent = text;
+  if(showCall){
+    const a = document.createElement('a');
+    a.className = 'callbtn'; a.href = 'tel:' + CONFIG.phone;
+    a.textContent = '📞 一键拨打 ' + CONFIG.phone;
+    div.appendChild(document.createElement('br'));
+    div.appendChild(a);
+  }
+  chatBd.appendChild(div);
+  chatBd.scrollTop = chatBd.scrollHeight;
+}
+function botSay(text, showCall){
+  const typing = document.createElement('div');
+  typing.className = 'msg bot'; typing.textContent = '正在输入…';
+  chatBd.appendChild(typing); chatBd.scrollTop = chatBd.scrollHeight;
+  setTimeout(()=>{ typing.remove(); addMsg(text, 'bot', showCall); }, 380);
+}
+function renderChips(){
+  CHIPS.forEach(c=>{
+    const b = document.createElement('button');
+    b.textContent = c;
+    b.onclick = ()=>{ addMsg(c,'me'); answer(c); };
+    chipsBox.appendChild(b);
+  });
+}
+function answer(q){
+  let best = null, bestScore = 0;
+  KB.forEach(item=>{
+    let s = 0;
+    item.keys.forEach(k=>{ if(q.toLowerCase().includes(k.toLowerCase())) s += k.length; });
+    if(s > bestScore){ bestScore = s; best = item; }
+  });
+  if(best) botSay(best.a, best.showCall);
+  else botSay(FALLBACK, true);
+}
+function sendMsg(){
+  const inp = document.getElementById('chatInput');
+  const v = inp.value.trim();
+  if(!v) return;
+  inp.value = '';
+  addMsg(v, 'me');
+  answer(v);
+}
+
+/* ---------- 滚动动效 ---------- */
+const io = new IntersectionObserver(es=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* 客服按钮红点：打开后消失 */
+document.querySelector('.fab.chat').addEventListener('click', ()=>{
+  const d = document.querySelector('.fab.chat .dot'); if(d) d.style.display='none';
+});
+</script>
+</body>
+</html>
