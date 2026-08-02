@@ -89,8 +89,10 @@ section{padding:52px 0}
 @keyframes gIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 .g-card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;cursor:zoom-in;transition:transform .25s,box-shadow .25s;animation:gIn .5s ease both;margin:0}
 .g-card:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(90,60,30,.16)}
-.g-card .gi{position:relative;overflow:hidden;aspect-ratio:3/4;background:#f1ebe1}
-.g-card .gi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.g-card .gi{position:relative;overflow:hidden;aspect-ratio:3/4;background:linear-gradient(110deg,#f1ebe1 30%,#faf5ec 46%,#f1ebe1 62%);background-size:200% 100%;animation:shimmer 1.5s linear infinite}
+@keyframes shimmer{to{background-position:-200% 0}}
+.g-card .gi img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:transform .5s ease,opacity .45s ease}
+.g-card .gi img.ok{opacity:1}
 .g-card:hover .gi img{transform:scale(1.05)}
 .g-zoom{position:absolute;right:10px;bottom:10px;background:rgba(30,22,14,.72);color:#fff;font-size:12.5px;border-radius:999px;padding:6px 13px;opacity:0;transform:translateY(6px);transition:.25s;backdrop-filter:blur(4px);pointer-events:none}
 .g-card:hover .g-zoom{opacity:1;transform:none}
@@ -107,7 +109,7 @@ section{padding:52px 0}
 .lb.open{display:flex}
 .lb-box{display:flex;max-width:min(1060px,96vw);max-height:92vh;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.55)}
 .lb-img{background:#14100c;display:flex;align-items:center;justify-content:center;min-width:0}
-.lb-img img{display:block;max-height:92vh;max-width:min(620px,58vw);width:auto;height:auto;object-fit:contain}
+.lb-img img{display:block;max-height:92vh;max-width:min(620px,58vw);width:auto;height:auto;object-fit:contain;transition:opacity .25s ease}
 .lb-info{width:310px;flex:none;padding:24px 24px 20px;display:flex;flex-direction:column;overflow-y:auto}
 .lb-count{font-size:12.5px;color:var(--muted);letter-spacing:1px;margin-bottom:10px}
 .lb-chip{display:inline-block;align-self:flex-start;font-size:12px;color:var(--brand);background:#f8efe5;border:1px solid #ecd9c2;border-radius:999px;padding:3px 11px;margin-bottom:10px}
@@ -251,8 +253,8 @@ footer b{color:#ffe3b3;font-size:16px}
       </div>
     </div>
     <a class="hero-visual" href="#gallery" aria-label="查看样板间实景图库">
-      <div class="hv-card c1"><img src="images/GF-MAML180912-077.jpg" alt="冠珠瓷砖 爱马仕灰 客厅样板间实景" loading="eager"></div>
-      <div class="hv-card c2"><img src="images/GF-JQSML180912-200.jpg" alt="冠珠瓷砖 雪山银狐 客厅样板间实景" fetchpriority="high"></div>
+      <div class="hv-card c1"><img src="images/thumb/GF-MAML180912-077.jpg" alt="冠珠瓷砖 爱马仕灰 客厅样板间实景" loading="eager"></div>
+      <div class="hv-card c2"><img src="images/thumb/GF-JQSML180912-200.jpg" alt="冠珠瓷砖 雪山银狐 客厅样板间实景" fetchpriority="high"></div>
       <div class="hv-badge">📷 <b>19 组</b>样板间实景图<br>点击查看 ↓</div>
     </a>
   </div>
@@ -311,8 +313,8 @@ footer b{color:#ffe3b3;font-size:16px}
       <h3>🎉 本月到店专属优惠</h3>
       <p>电话预约到店，报"网页看到的"即可尊享</p>
       <div class="grid">
-        <div class="item"><div class="big">满减礼</div><div class="txt">瓷砖满额立减<br>200</div></div>
-        <div class="item"><div class="big">套餐价</div><div class="txt">整家定制套餐特惠<br>500</div></div>
+        <div class="item"><div class="big">满减礼</div><div class="txt">瓷砖满额立减<br>【金额可修改】</div></div>
+        <div class="item"><div class="big">套餐价</div><div class="txt">整家定制套餐特惠<br>【内容可修改】</div></div>
         <div class="item"><div class="big">0 元</div><div class="txt">免费量房 + 设计<br>全程无押金</div></div>
       </div>
       <p style="margin-top:22px"><a class="btn" style="background:#fff;color:var(--brand)" href="tel:13363410444">立即电话锁定优惠</a></p>
@@ -481,13 +483,17 @@ GALLERY.forEach((g,idx)=>{
   card.dataset.sp = g.sp;
   card.style.animationDelay = Math.min(idx*45, 600) + 'ms';
   card.innerHTML =
-    '<div class="gi"><img src="images/' + g.f + '" alt="冠珠瓷砖 ' + g.n + ' ' + g.spl + ' 样板间实景" ' +
-    'width="1200" height="1600" loading="lazy" decoding="async">' +
+    '<div class="gi"><img src="images/thumb/' + g.f + '" alt="冠珠瓷砖 ' + g.n + ' ' + g.spl + ' 样板间实景" ' +
+    'width="600" height="800" loading="lazy" decoding="async">' +
     '<span class="g-zoom">🔍 点击放大</span></div>' +
     '<figcaption class="g-cap"><span><span class="g-name">' + g.n + '</span>' +
     (g.m ? '<span class="g-model">' + g.m + '</span>' : '') +
     '</span><span class="g-chip">' + g.spl + '</span></figcaption>';
   card.onclick = ()=>openLb(idx);
+  /* 图片加载完成后平滑淡入，不再逐行刷出 */
+  const im = card.querySelector('img');
+  if(im.complete && im.naturalWidth) im.classList.add('ok');
+  else im.addEventListener('load', ()=>im.classList.add('ok'));
   gGrid.appendChild(card);
 });
 
@@ -533,8 +539,15 @@ function stepLb(d){
 }
 function renderLb(){
   const g = GALLERY[lbList[lbPos]];
+  lbImg.style.opacity = 0;
+  lbImg.onload = ()=>{ lbImg.style.opacity = 1; };
   lbImg.src = 'images/' + g.f;
   lbImg.alt = '冠珠瓷砖 ' + g.n + ' ' + g.spl + ' 样板间实景大图';
+  /* 预加载前后两张，切换时不等待 */
+  [1,-1].forEach(d=>{
+    const i = (lbPos + d + lbList.length) % lbList.length;
+    (new Image()).src = 'images/' + GALLERY[lbList[i]].f;
+  });
   document.getElementById('lbCount').textContent = (lbPos+1) + ' / ' + lbList.length;
   document.getElementById('lbChip').textContent = g.spl;
   document.getElementById('lbName').textContent = g.n;
