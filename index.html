@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>冠珠陶瓷·索菲亚整家定制｜品质家装一站购</title>
-<meta name="description" content="冠珠陶瓷·索菲亚整家定制：瓷砖岩板、全屋定制一站购齐，免费量房设计，正品保障。咨询热线 13363410444（微信同号）">
+<title>冠珠陶瓷·索菲亚整家定制｜样板间实景·品质家装一站购</title>
+<meta name="description" content="冠珠陶瓷·索菲亚整家定制：19组样板间实景图在线看，瓷砖岩板、全屋定制一站购齐，免费量房设计，正品保障。咨询热线 13363410444（微信同号）">
 <style>
 :root{
   --bg:#f7f3ec; --card:#ffffff; --ink:#2c231a; --muted:#8a7a6a;
@@ -16,31 +16,50 @@ body{font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;b
 img{max-width:100%}
 a{text-decoration:none;color:inherit}
 .wrap{max-width:960px;margin:0 auto;padding:0 18px}
+.wrap.wide{max-width:1140px}
 
 /* 顶部导航 */
 .nav{position:sticky;top:0;z-index:50;background:rgba(247,243,236,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
-.nav .logo{font-weight:700;font-size:17px;letter-spacing:1px}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:14px}
+.nav .logo{font-weight:700;font-size:17px;letter-spacing:1px;white-space:nowrap}
 .nav .logo span{color:var(--brand)}
-.btn{display:inline-block;padding:12px 26px;border-radius:999px;background:var(--brand);color:#fff;font-weight:600;font-size:16px;box-shadow:0 4px 14px rgba(164,87,42,.28);transition:.2s}
+.nav-links{display:flex;gap:22px;font-size:14.5px;color:var(--ink)}
+.nav-links a{position:relative;padding:4px 0}
+.nav-links a:hover{color:var(--brand)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--brand);border-radius:2px;transition:width .25s}
+.nav-links a:hover::after{width:100%}
+.btn{display:inline-block;padding:12px 26px;border-radius:999px;background:var(--brand);color:#fff;font-weight:600;font-size:16px;box-shadow:0 4px 14px rgba(164,87,42,.28);transition:.2s;border:none;cursor:pointer;font-family:inherit}
 .btn:active{transform:scale(.96)}
 .btn.ghost{background:#fff;color:var(--brand);border:1.5px solid var(--brand);box-shadow:none}
 .btn.sm{padding:8px 18px;font-size:14px}
 
 /* 首屏 */
-.hero{padding:64px 0 48px;text-align:center;background:linear-gradient(180deg,#f2e8da 0%,var(--bg) 100%)}
+.hero{padding:56px 0 52px;background:linear-gradient(180deg,#f2e8da 0%,var(--bg) 100%);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
 .hero .tag{display:inline-block;font-size:13px;color:var(--brand);border:1px solid var(--gold);border-radius:999px;padding:4px 14px;margin-bottom:16px;background:#fff8ef}
-.hero h1{font-size:30px;line-height:1.4;letter-spacing:1px}
+.hero h1{font-size:32px;line-height:1.4;letter-spacing:1px}
 .hero h1 em{font-style:normal;color:var(--brand)}
-.hero p.sub{margin:14px auto 26px;color:var(--muted);font-size:16px;max-width:560px}
-.hero .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.badges{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:30px}
+.hero p.sub{margin:14px 0 26px;color:var(--muted);font-size:16px;max-width:560px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
 .badges div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 16px;font-size:13.5px;color:var(--ink)}
 .badges b{color:var(--brand)}
 
+/* 首屏产品海报视觉 */
+.hero-visual{position:relative;height:470px;user-select:none;display:block}
+.hv-card{position:absolute;width:248px;border:7px solid #fff;border-radius:16px;box-shadow:0 20px 46px rgba(90,60,30,.24);overflow:hidden;background:#fff;transition:transform .35s ease}
+.hv-card img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}
+.hv-card.c1{right:156px;top:0;transform:rotate(-5deg);z-index:1}
+.hv-card.c2{right:0;top:58px;transform:rotate(4deg);z-index:2}
+.hero-visual:hover .hv-card.c1{transform:rotate(-7deg) translateX(-8px)}
+.hero-visual:hover .hv-card.c2{transform:rotate(5deg) translateX(6px)}
+.hv-badge{position:absolute;z-index:3;left:0;bottom:8px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 16px;font-size:13px;box-shadow:0 10px 24px rgba(90,60,30,.16);transition:.2s;line-height:1.55}
+.hv-badge:hover{border-color:var(--brand)}
+.hv-badge b{color:var(--brand)}
+
 /* 区块 */
 section{padding:52px 0}
-.sec-title{text-align:center;margin-bottom:34px}
+.sec-title{text-align:center;margin-bottom:30px}
 .sec-title h2{font-size:24px;letter-spacing:2px}
 .sec-title p{color:var(--muted);font-size:14px;margin-top:6px}
 .sec-title::after{content:"";display:block;width:44px;height:3px;background:var(--gold);margin:12px auto 0;border-radius:2px}
@@ -58,6 +77,54 @@ section{padding:52px 0}
 .brand-card li{padding:6px 0 6px 24px;position:relative;font-size:15px;border-bottom:1px dashed var(--line)}
 .brand-card li:last-child{border-bottom:none}
 .brand-card li::before{content:"✔";position:absolute;left:0;color:var(--brand);font-weight:700}
+
+/* ============ 样板间实景画廊 ============ */
+.gallery{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.filterbar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:26px}
+.fbtn{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 17px;font-size:14px;color:var(--muted);cursor:pointer;transition:.2s;font-family:inherit}
+.fbtn:hover{border-color:var(--brand);color:var(--brand)}
+.fbtn.on{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:600;box-shadow:0 4px 12px rgba(164,87,42,.25)}
+.fbtn .n{font-size:12px;opacity:.75;margin-left:3px}
+.g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;transition:opacity .18s ease}
+@keyframes gIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.g-card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;cursor:zoom-in;transition:transform .25s,box-shadow .25s;animation:gIn .5s ease both;margin:0}
+.g-card:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(90,60,30,.16)}
+.g-card .gi{position:relative;overflow:hidden;aspect-ratio:3/4;background:#f1ebe1}
+.g-card .gi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.g-card:hover .gi img{transform:scale(1.05)}
+.g-zoom{position:absolute;right:10px;bottom:10px;background:rgba(30,22,14,.72);color:#fff;font-size:12.5px;border-radius:999px;padding:6px 13px;opacity:0;transform:translateY(6px);transition:.25s;backdrop-filter:blur(4px);pointer-events:none}
+.g-card:hover .g-zoom{opacity:1;transform:none}
+.g-cap{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px 14px;border-top:1px solid var(--line);text-align:left}
+.g-name{font-weight:700;font-size:15.5px;line-height:1.35}
+.g-model{display:block;font-size:11.5px;color:var(--muted);letter-spacing:.4px;margin-top:1px}
+.g-chip{flex:none;font-size:12px;color:var(--brand);background:#f8efe5;border:1px solid #ecd9c2;border-radius:999px;padding:3px 10px;white-space:nowrap}
+.g-card.hide{display:none}
+.g-note{text-align:center;color:var(--muted);font-size:13.5px;margin-top:26px}
+.g-cta{text-align:center;margin-top:16px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* 灯箱 */
+.lb{position:fixed;inset:0;z-index:200;background:rgba(22,15,9,.92);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:18px}
+.lb.open{display:flex}
+.lb-box{display:flex;max-width:min(1060px,96vw);max-height:92vh;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.lb-img{background:#14100c;display:flex;align-items:center;justify-content:center;min-width:0}
+.lb-img img{display:block;max-height:92vh;max-width:min(620px,58vw);width:auto;height:auto;object-fit:contain}
+.lb-info{width:310px;flex:none;padding:24px 24px 20px;display:flex;flex-direction:column;overflow-y:auto}
+.lb-count{font-size:12.5px;color:var(--muted);letter-spacing:1px;margin-bottom:10px}
+.lb-chip{display:inline-block;align-self:flex-start;font-size:12px;color:var(--brand);background:#f8efe5;border:1px solid #ecd9c2;border-radius:999px;padding:3px 11px;margin-bottom:10px}
+.lb-info h3{font-size:24px;letter-spacing:1px;line-height:1.3}
+.lb-model{font-size:13px;color:var(--muted);letter-spacing:.5px;margin-top:2px}
+.lb-specs{margin:16px 0 0;border-top:1px solid var(--line)}
+.lb-specs .row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.lb-specs .row span{color:var(--muted);flex:none}
+.lb-specs .row b{font-weight:600;text-align:right}
+.lb-desc{margin-top:14px;font-size:14px;color:var(--ink);background:#faf6ef;border-radius:10px;padding:12px 14px;line-height:1.75}
+.lb-cta{margin-top:auto;padding-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+.lb-x{position:absolute;top:14px;right:16px;z-index:2;width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,.14);color:#fff;font-size:19px;cursor:pointer;transition:.2s}
+.lb-x:hover{background:rgba(255,255,255,.3)}
+.lb-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:46px;height:46px;border-radius:50%;border:none;background:rgba(255,255,255,.14);color:#fff;font-size:26px;line-height:1;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center}
+.lb-arrow:hover{background:rgba(255,255,255,.32)}
+.lb-arrow.prev{left:14px}
+.lb-arrow.next{right:14px}
 
 /* 优惠 */
 .promo{background:linear-gradient(135deg,#8a4620,#a4572a);color:#fff;border-radius:20px;padding:34px 28px;text-align:center}
@@ -115,11 +182,38 @@ footer b{color:#ffe3b3;font-size:16px}
 .reveal{opacity:0;transform:translateY(22px);transition:.6s ease}
 .reveal.in{opacity:1;transform:none}
 
+@media(max-width:1020px){
+  .nav-links{display:none}
+}
+@media(max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;text-align:center}
+  .hero{padding:44px 0 40px}
+  .hero p.sub{margin-left:auto;margin-right:auto}
+  .hero .cta{justify-content:center}
+  .badges{justify-content:center}
+  .hero-visual{height:296px;max-width:420px;margin:6px auto 0;width:100%}
+  .hv-card{width:172px;border-width:5px;border-radius:13px}
+  .hv-card.c1{left:4%;right:auto;top:0}
+  .hv-card.c2{right:4%;top:26px}
+  .hv-badge{left:50%;transform:translateX(-50%);bottom:-2px;white-space:nowrap;padding:8px 14px}
+  .g-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  /* 灯箱移动端：上下结构 */
+  .lb{padding:0}
+  .lb-box{flex-direction:column;width:100vw;max-width:100vw;height:100vh;max-height:100vh;border-radius:0}
+  .lb-img{flex:none}
+  .lb-img img{max-width:100vw;max-height:48vh}
+  .lb-info{width:100%;flex:1;padding:18px 18px 26px}
+  .lb-arrow{top:auto;bottom:12px;transform:none;background:rgba(30,22,14,.55)}
+  .lb-arrow.prev{left:12px}
+  .lb-arrow.next{right:12px}
+}
 @media(max-width:680px){
   .cards{grid-template-columns:1fr}
   .promo .grid{grid-template-columns:1fr}
   .hero h1{font-size:25px}
   .nav .logo{font-size:14.5px}
+  .g-cap{flex-direction:column;align-items:flex-start;gap:5px;padding:10px 12px}
+  .g-name{font-size:14.5px}
 }
 </style>
 </head>
@@ -128,25 +222,39 @@ footer b{color:#ffe3b3;font-size:16px}
 <nav class="nav">
   <div class="wrap">
     <div class="logo">冠珠陶瓷 <span>×</span> 索菲亚整家定制</div>
+    <div class="nav-links">
+      <a href="#brands">品牌</a>
+      <a href="#gallery">样板间实景</a>
+      <a href="#promo">优惠</a>
+      <a href="#visit">到店</a>
+      <a href="#lead">预约</a>
+    </div>
     <a class="btn sm" href="tel:13363410444">📞 电话咨询</a>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <div class="tag">本地实体门店 · 正品保障 · 免费量房设计</div>
-    <h1>瓷砖 + 全屋定制<br><em>一站购齐</em>，装修省心更省钱</h1>
-    <p class="sub">冠珠陶瓷厂价直供 · 索菲亚整家定制环保板材<br>到店享专属优惠，全城免费上门量房出图</p>
-    <div class="cta">
-      <a class="btn" href="tel:13363410444">📞 一键拨打热线</a>
-      <button class="btn ghost" onclick="openChat()">💬 在线咨询</button>
+    <div class="hero-text">
+      <div class="tag">本地实体门店 · 正品保障 · 免费量房设计</div>
+      <h1>瓷砖 + 全屋定制<br><em>一站购齐</em>，装修省心更省钱</h1>
+      <p class="sub">冠珠陶瓷厂价直供 · 索菲亚整家定制环保板材<br>到店享专属优惠，全城免费上门量房出图</p>
+      <div class="cta">
+        <a class="btn" href="tel:13363410444">📞 一键拨打热线</a>
+        <button class="btn ghost" onclick="openChat()">💬 在线咨询</button>
+      </div>
+      <div class="badges">
+        <div><b>✔</b> 品牌正品</div>
+        <div><b>✔</b> 免费量房设计</div>
+        <div><b>✔</b> 报价透明无增项</div>
+        <div><b>✔</b> 售后无忧</div>
+      </div>
     </div>
-    <div class="badges">
-      <div><b>✔</b> 品牌正品</div>
-      <div><b>✔</b> 免费量房设计</div>
-      <div><b>✔</b> 报价透明无增项</div>
-      <div><b>✔</b> 售后无忧</div>
-    </div>
+    <a class="hero-visual" href="#gallery" aria-label="查看样板间实景图库">
+      <div class="hv-card c1"><img src="images/GF-MAML180912-077.jpg" alt="冠珠瓷砖 爱马仕灰 客厅样板间实景" loading="eager"></div>
+      <div class="hv-card c2"><img src="images/GF-JQSML180912-200.jpg" alt="冠珠瓷砖 雪山银狐 客厅样板间实景" fetchpriority="high"></div>
+      <div class="hv-badge">📷 <b>19 组</b>样板间实景图<br>点击查看 ↓</div>
+    </a>
   </div>
 </header>
 
@@ -184,14 +292,27 @@ footer b{color:#ffe3b3;font-size:16px}
   </div>
 </section>
 
+<section id="gallery" class="gallery">
+  <div class="wrap wide">
+    <div class="sec-title reveal"><h2>样板间实景 · 所见即所得</h2><p>冠珠瓷砖官方样板间效果，点击可放大看细节 · 到店看实物大板更震撼</p></div>
+    <div class="filterbar reveal" id="filterBar"></div>
+    <div class="g-grid" id="gGrid"></div>
+    <p class="g-note reveal">以上为冠珠瓷砖官方样板间效果图，共 19 组 · 门店上千款实物大板任选，欢迎到店看砖、摸质感</p>
+    <div class="g-cta reveal">
+      <a class="btn" href="tel:13363410444">📞 预约到店看实物</a>
+      <button class="btn ghost" onclick="openChat()">💬 在线咨询选款</button>
+    </div>
+  </div>
+</section>
+
 <section id="promo">
   <div class="wrap">
     <div class="promo reveal">
       <h3>🎉 本月到店专属优惠</h3>
       <p>电话预约到店，报"网页看到的"即可尊享</p>
       <div class="grid">
-        <div class="item"><div class="big">满减礼</div><div class="txt">瓷砖满额立减<br>【金额可修改】</div></div>
-        <div class="item"><div class="big">套餐价</div><div class="txt">整家定制套餐特惠<br>【内容可修改】</div></div>
+        <div class="item"><div class="big">满减礼</div><div class="txt">瓷砖满额立减<br>200</div></div>
+        <div class="item"><div class="big">套餐价</div><div class="txt">整家定制套餐特惠<br>500</div></div>
         <div class="item"><div class="big">0 元</div><div class="txt">免费量房 + 设计<br>全程无押金</div></div>
       </div>
       <p style="margin-top:22px"><a class="btn" style="background:#fff;color:var(--brand)" href="tel:13363410444">立即电话锁定优惠</a></p>
@@ -254,6 +375,28 @@ footer b{color:#ffe3b3;font-size:16px}
 <a class="fab call" href="tel:13363410444" title="拨打电话">📞</a>
 <button class="fab chat" onclick="toggleChat()" title="在线客服">💬<span class="dot"></span></button>
 
+<!-- 图片灯箱 -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="样板间大图">
+  <button class="lb-x" id="lbX" aria-label="关闭">✕</button>
+  <button class="lb-arrow prev" id="lbPrev" aria-label="上一张">‹</button>
+  <div class="lb-box">
+    <div class="lb-img"><img id="lbImg" alt=""></div>
+    <div class="lb-info">
+      <div class="lb-count" id="lbCount"></div>
+      <span class="lb-chip" id="lbChip"></span>
+      <h3 id="lbName"></h3>
+      <div class="lb-model" id="lbModel"></div>
+      <div class="lb-specs" id="lbSpecs"></div>
+      <p class="lb-desc" id="lbDesc"></p>
+      <div class="lb-cta">
+        <a class="btn sm" href="tel:13363410444">📞 电话问这款</a>
+        <button class="btn sm ghost" onclick="closeLb();openChat()">💬 在线客服</button>
+      </div>
+    </div>
+  </div>
+  <button class="lb-arrow next" id="lbNext" aria-label="下一张">›</button>
+</div>
+
 <!-- 智能客服聊天窗 -->
 <div class="chatbox" id="chatbox">
   <div class="chat-hd">
@@ -283,6 +426,148 @@ const CONFIG = {
 document.getElementById('amapLink').href =
   'https://ditu.amap.com/search?query=' + encodeURIComponent(CONFIG.amapKeyword);
 
+/* ---------- 样板间实景画廊 ---------- */
+/* f=图片文件 n=名称 m=型号 sp=分类 spl=应用空间 fi=工艺面 fa=纹理 sz=规格 d=卖点 */
+const GALLERY = [
+  {f:'GF-MAML180912-080.jpg', n:'霞明玉映',   m:'GF-MAML180912-080', sp:'living',  spl:'客厅地面',     fi:'亮光', fa:'6面任意连纹', sz:'1800×900×12mm', d:'大理石釉配方+干粒抛工艺升级，媲美天然真石质感。'},
+  {f:'GF-DVU157510-565.jpg',  n:'墨峦',       m:'GF-DVU157510-565',  sp:'living',  spl:'客厅地面',     fi:'哑光', fa:'6面随机',     sz:'1500×750×10mm', d:'以真实触感还原质感空间，以自然肌理构筑松弛之境。'},
+  {f:'GF-MAML180912-078.jpg', n:'南斯拉夫白', m:'GF-MAML180912-078', sp:'living',  spl:'客厅地面',     fi:'亮光', fa:'6面任意连纹', sz:'1800×900×12mm', d:'任意连纹设计，效果灵动不呆板，满足"放大空间"的高阶需求。'},
+  {f:'GF-MAML180912-077.jpg', n:'爱马仕灰',   m:'GF-MAML180912-077', sp:'living',  spl:'客厅地面',     fi:'亮光', fa:'6面任意连纹', sz:'1800×900×12mm', d:'融入创新性功能墨水，丝丝微凹石纹与凹陷碎点精致细腻。'},
+  {f:'GF-JQSML180912-200.jpg',n:'雪山银狐',   m:'GF-JQSML180912-200',sp:'living',  spl:'客厅墙面',     fi:'亮光', fa:'6面任意连纹', sz:'1800×900×12mm', d:'通过精密铺贴技术，打造视野开阔、高级感满满的家。'},
+  {f:'GF-DVU157510-562.jpg',  n:'寒川',       m:'GF-DVU157510-562',  sp:'living',  spl:'客厅地面',     fi:'哑光', fa:'6面随机',     sz:'1500×750×10mm', d:'18-25° 舒适漫反射，营造柔和宁静的高级视觉氛围。'},
+  {f:'GF-DVU157510-560.jpg',  n:'松泉',       m:'GF-DVU157510-560',  sp:'living',  spl:'客厅地面',     fi:'哑光', fa:'6面随机',     sz:'1500×750×10mm', d:'叠加岩石模具面工艺，纹理凹凸分明，层次丰富。'},
+  {f:'GF-JQSML180912-202.jpg',n:'玻利维亚蓝', m:'GF-JQSML180912-202',sp:'living',  spl:'客厅·衣帽间', fi:'亮光', fa:'6面任意连纹', sz:'1800×900×12mm', d:'以玻利维亚蓝，演绎生活静美。'},
+  {f:'GF-JQSML180912-205.jpg',n:'圣罗兰黑金', m:'GF-JQSML180912-205',sp:'bath',    spl:'卫生间墙地面', fi:'亮光', fa:'6面任意连纹', sz:'1800×900×12mm', d:'以黑金色调淬炼高阶品味，赋予空间低调的璀璨浪漫。'},
+  {f:'GF-MAML180912-501.jpg', n:'极品东方白', m:'GF-MAML180912-501', sp:'bath',    spl:'卫生间墙面',   fi:'亮光', fa:'6面任意连纹', sz:'1800×900×12mm', d:'12mm 厚白坯，洁白细腻，通透感更强，品质更出众。'},
+  {f:'GF-DVU157510-559.jpg',  n:'玉烟',       m:'GF-DVU157510-559',  sp:'bath',    spl:'卫生间墙地面', fi:'哑光', fa:'6面随机',     sz:'1500×750×10mm', d:'金丝绒复刻釉+深刻墨水双重工艺，精准勾勒天然石材原生肌理与细节。'},
+  {f:'GF-DVU157510-561.jpg',  n:'梧霜',       m:'GF-DVU157510-561',  sp:'bath',    spl:'卫生间墙地面', fi:'哑光', fa:'6面随机',     sz:'1500×750×10mm', d:'高密度耐磨，防污又防滑，打理更轻松，全面守护家人安全。'},
+  {f:'GF-MAML157512-922.jpg', n:'烟粉汀兰',   m:'GF-MAML157512-922', sp:'kitchen', spl:'厨房地面',     fi:'亮光', fa:'6面任意连纹', sz:'1500×750×12mm', d:'精密铺贴工艺，缝隙间隙更小，铺贴效果大气连贯，空间更显开阔。'},
+  {f:'GF-JQSML180912-201.jpg',n:'蒂芙尼绿',   m:'GF-JQSML180912-201',sp:'bed',     spl:'餐厅·卧室',   fi:'亮光', fa:'6面任意连纹', sz:'1800×900×12mm', d:'一抹蒂芙尼绿，慢享奢华时光。'},
+  {f:'GF-MAML180912-072.jpg', n:'罗马银灰',   m:'GF-MAML180912-072', sp:'study',   spl:'书房地面',     fi:'亮光', fa:'6面任意连纹', sz:'1800×900×12mm', d:'方寸之间，肌理脉络栩栩如生；看见即心动，像把奢石搬回家。'},
+  {f:'muwen-keting-1.jpg',    n:'木纹砖 · 暖阳客厅', m:'', sp:'wood', spl:'客厅地面',   fi:'木纹砖', fa:'多面随机', sz:'多规格可选', d:'温润木质观感，兼备瓷砖的耐磨、防水、易打理，家有老人小孩更安心。'},
+  {f:'muwen-keting-2.jpg',    n:'木纹砖 · 亲子客厅', m:'', sp:'wood', spl:'客厅地面',   fi:'木纹砖', fa:'多面随机', sz:'多规格可选', d:'大规格木纹砖通铺，空间温暖开阔，孩子光脚玩耍也放心。'},
+  {f:'muwen-canting.jpg',     n:'木纹砖 · 餐厅',     m:'', sp:'wood', spl:'餐厅地面',   fi:'木纹砖', fa:'多面随机', sz:'多规格可选', d:'原木色调营造放松用餐氛围，油污一擦即净，比木地板更省心。'},
+  {f:'muwen-ertongfang.jpg',  n:'木纹砖 · 儿童房',   m:'', sp:'wood', spl:'儿童房地面', fi:'木纹砖', fa:'多面随机', sz:'多规格可选', d:'温和木色陪伴成长，耐磨耐刮易清洁，玩具推车都不怕。'},
+];
+const FILTERS = [
+  {k:'all',     t:'全部'},
+  {k:'living',  t:'客厅'},
+  {k:'bath',    t:'卫生间'},
+  {k:'kitchen', t:'厨房'},
+  {k:'bed',     t:'卧室·餐厅'},
+  {k:'study',   t:'书房'},
+  {k:'wood',    t:'木纹砖系列'},
+];
+
+const gGrid = document.getElementById('gGrid');
+const filterBar = document.getElementById('filterBar');
+let curFilter = 'all';
+
+/* 渲染筛选按钮（带数量） */
+FILTERS.forEach((f,i)=>{
+  const n = f.k==='all' ? GALLERY.length : GALLERY.filter(g=>g.sp===f.k).length;
+  const b = document.createElement('button');
+  b.className = 'fbtn' + (i===0 ? ' on' : '');
+  b.dataset.k = f.k;
+  b.innerHTML = f.t + '<span class="n">' + n + '</span>';
+  b.onclick = ()=>applyFilter(f.k, b);
+  filterBar.appendChild(b);
+});
+
+/* 渲染图片卡片 */
+GALLERY.forEach((g,idx)=>{
+  const card = document.createElement('figure');
+  card.className = 'g-card';
+  card.dataset.sp = g.sp;
+  card.style.animationDelay = Math.min(idx*45, 600) + 'ms';
+  card.innerHTML =
+    '<div class="gi"><img src="images/' + g.f + '" alt="冠珠瓷砖 ' + g.n + ' ' + g.spl + ' 样板间实景" ' +
+    'width="1200" height="1600" loading="lazy" decoding="async">' +
+    '<span class="g-zoom">🔍 点击放大</span></div>' +
+    '<figcaption class="g-cap"><span><span class="g-name">' + g.n + '</span>' +
+    (g.m ? '<span class="g-model">' + g.m + '</span>' : '') +
+    '</span><span class="g-chip">' + g.spl + '</span></figcaption>';
+  card.onclick = ()=>openLb(idx);
+  gGrid.appendChild(card);
+});
+
+function applyFilter(k, btn){
+  curFilter = k;
+  document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  gGrid.style.opacity = 0;
+  setTimeout(()=>{
+    document.querySelectorAll('.g-card').forEach(c=>{
+      c.classList.toggle('hide', k!=='all' && c.dataset.sp!==k);
+    });
+    gGrid.style.opacity = 1;
+  }, 160);
+}
+
+/* 当前筛选下可见的图片下标列表（灯箱按此顺序切换） */
+function visibleList(){
+  const list = [];
+  GALLERY.forEach((g,i)=>{ if(curFilter==='all' || g.sp===curFilter) list.push(i); });
+  return list;
+}
+
+/* ---------- 灯箱 ---------- */
+const lb = document.getElementById('lb');
+const lbImg = document.getElementById('lbImg');
+let lbList = [], lbPos = 0;
+
+function openLb(idx){
+  lbList = visibleList();
+  lbPos = Math.max(0, lbList.indexOf(idx));
+  renderLb();
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLb(){
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function stepLb(d){
+  lbPos = (lbPos + d + lbList.length) % lbList.length;
+  renderLb();
+}
+function renderLb(){
+  const g = GALLERY[lbList[lbPos]];
+  lbImg.src = 'images/' + g.f;
+  lbImg.alt = '冠珠瓷砖 ' + g.n + ' ' + g.spl + ' 样板间实景大图';
+  document.getElementById('lbCount').textContent = (lbPos+1) + ' / ' + lbList.length;
+  document.getElementById('lbChip').textContent = g.spl;
+  document.getElementById('lbName').textContent = g.n;
+  document.getElementById('lbModel').textContent = g.m || '冠珠 · 木纹砖系列';
+  const rows = [];
+  if(g.fi) rows.push(['工艺面', g.fi]);
+  if(g.fa) rows.push(['纹理', g.fa]);
+  if(g.sz) rows.push(['规格', g.sz]);
+  rows.push(['应用', g.spl]);
+  document.getElementById('lbSpecs').innerHTML =
+    rows.map(r=>'<div class="row"><span>'+r[0]+'</span><b>'+r[1]+'</b></div>').join('');
+  document.getElementById('lbDesc').textContent = g.d;
+}
+document.getElementById('lbX').onclick = closeLb;
+document.getElementById('lbPrev').onclick = function(e){ e.stopPropagation(); stepLb(-1); };
+document.getElementById('lbNext').onclick = function(e){ e.stopPropagation(); stepLb(1); };
+lb.addEventListener('click', function(e){ if(e.target===lb) closeLb(); });
+document.addEventListener('keydown', function(e){
+  if(!lb.classList.contains('open')) return;
+  if(e.key==='Escape') closeLb();
+  if(e.key==='ArrowLeft') stepLb(-1);
+  if(e.key==='ArrowRight') stepLb(1);
+});
+/* 手机滑动切换 */
+let touchX = null;
+lbImg.addEventListener('touchstart', function(e){ touchX = e.touches[0].clientX; }, {passive:true});
+lbImg.addEventListener('touchend', function(e){
+  if(touchX===null) return;
+  const dx = e.changedTouches[0].clientX - touchX;
+  if(Math.abs(dx) > 42) stepLb(dx < 0 ? 1 : -1);
+  touchX = null;
+}, {passive:true});
+
 /* ---------- 留资表单 ---------- */
 let lastLeadText = '';
 document.getElementById('leadForm').addEventListener('submit', function(e){
@@ -309,6 +594,9 @@ function copyLead(){
 const KB = [
   {keys:['你好','您好','在吗','hi','hello','在不在'],
    a:'您好，欢迎咨询冠珠陶瓷·索菲亚整家定制！我是智能客服小珠～\n可以问我：产品价格、门店地址、最新优惠、免费量房等，也可以点下方"转人工"直接电话联系负责人。'},
+  {keys:['样板间','实景','案例','图片','照片','看看砖','款式'],
+   a:'我们整理了 19 组冠珠瓷砖官方样板间实景图（客厅、卫生间、厨房、卧室·餐厅、书房、木纹砖系列），点下方按钮直达图库，点击任意图片可放大看细节、查型号规格～\n门店还有上千款实物大板，欢迎到店看砖摸质感！',
+   link:{href:'#gallery', text:'🖼️ 查看样板间实景图库'}},
   {keys:['价格','多少钱','报价','价位','贵不贵','怎么卖','一平'],
    a:'关于价格：\n· 瓷砖为厂价直供，不同系列、规格价格不同，性价比很高；\n· 索菲亚定制按实际面积/套餐计价，报价透明无增项。\n想拿精准报价，可免费预约上门量房出图，或直接拨打 ' + CONFIG.phone + '，负责人一对一给您算价～'},
   {keys:['地址','在哪','位置','怎么走','导航','门店','哪里'],
@@ -330,7 +618,7 @@ const KB = [
    showCall:true},
 ];
 const FALLBACK = '这个问题小珠还在学习中😅\n您可以直接联系负责人，马上为您解决：\n电话（微信同号）：' + CONFIG.phone;
-const CHIPS = ['门店地址在哪','瓷砖多少钱','全屋定制怎么收费','现在有什么优惠','免费量房吗','转人工客服'];
+const CHIPS = ['有样板间图片吗','门店地址在哪','瓷砖多少钱','全屋定制怎么收费','现在有什么优惠','免费量房吗','转人工客服'];
 
 const chatBd = document.getElementById('chatBd');
 const chipsBox = document.getElementById('chips');
@@ -346,10 +634,20 @@ function openChat(){
   if(!box.classList.contains('open')) toggleChat();
   else document.getElementById('chatInput').focus();
 }
-function addMsg(text, who, showCall){
+function addMsg(text, who, showCall, link){
   const div = document.createElement('div');
   div.className = 'msg ' + who;
   div.textContent = text;
+  if(link){
+    div.appendChild(document.createElement('br'));
+    const a = document.createElement('a');
+    a.className = 'callbtn'; a.href = link.href; a.textContent = link.text;
+    a.addEventListener('click', function(){
+      const box = document.getElementById('chatbox');
+      if(box.classList.contains('open')) toggleChat();
+    });
+    div.appendChild(a);
+  }
   if(showCall){
     const a = document.createElement('a');
     a.className = 'callbtn'; a.href = 'tel:' + CONFIG.phone;
@@ -360,11 +658,11 @@ function addMsg(text, who, showCall){
   chatBd.appendChild(div);
   chatBd.scrollTop = chatBd.scrollHeight;
 }
-function botSay(text, showCall){
+function botSay(text, showCall, link){
   const typing = document.createElement('div');
   typing.className = 'msg bot'; typing.textContent = '正在输入…';
   chatBd.appendChild(typing); chatBd.scrollTop = chatBd.scrollHeight;
-  setTimeout(()=>{ typing.remove(); addMsg(text, 'bot', showCall); }, 380);
+  setTimeout(()=>{ typing.remove(); addMsg(text, 'bot', showCall, link); }, 380);
 }
 function renderChips(){
   CHIPS.forEach(c=>{
@@ -381,7 +679,7 @@ function answer(q){
     item.keys.forEach(k=>{ if(q.toLowerCase().includes(k.toLowerCase())) s += k.length; });
     if(s > bestScore){ bestScore = s; best = item; }
   });
-  if(best) botSay(best.a, best.showCall);
+  if(best) botSay(best.a, best.showCall, best.link);
   else botSay(FALLBACK, true);
 }
 function sendMsg(){
